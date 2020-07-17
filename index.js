@@ -211,12 +211,12 @@ const artists = [
 
 /* according to google the string.slice function should work here however I dont recall learning to use .slice or learning how to pull information out of the object when it is nothing but a string.*/
 
-console.log(artists[0]); /* if these were methods as we were taught i could legitimately just console.log(artists[0].name);*/
-console.log(artists[2]); /* this one would be console.log(artists[2].bio);*/
+console.log(artists[0]["name"]); /* if these were methods as we were taught i could legitimately just console.log(artists[0].name);*/
+console.log(artists[2]["bio"]); /* this one would be console.log(artists[2].bio);*/
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-artists[8].name = "Vincent Van Gogh";
+artists[8]["name"] = "Vincent Van Gogh";
 console.log(artists);
 
 
@@ -229,9 +229,9 @@ console.log(artists);
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(array, index) {
-  return `"The artist at ${artists[index]} is: "${artists[index].name}"`
+  return `"The artist at index ${artists[6]["id"]} is: "${artists[6]["name"]}"`
   }
-  console.log(artists, 3);
+  console.log(getArtistByIndex(artists, 6));
   /**
 
 
@@ -254,11 +254,17 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
-  }
+// function removeArtist(arr, index){
   
- 
+//   for(let i = 0; i < arr.length; i++){    
+//     if(arr[i].includes(index)){    
+//       return arr.splice(i,1);
+
+//     }
+//     return arr;
+// }
+// }
+// console.log(removeArtist(artists,0));
 
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
@@ -273,12 +279,17 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(artists){
-
-  artists.push({ id: 20, name:"Emanuel", years: 1991-2020, genre: "Web Design", nationality: "African American", bio: "i wish this assignment portion actually made sense but it does not."});
-
-  }
-console.log(artists);
+function addArtist(object){
+   let object = artists.push();
+  artists[21]["id"]= 20;
+  artists[20]["name"] = "Emanuel Luper";
+  artists[20]["years"]= 1991-2020;
+  artists[20]["genre"]= "Web Design";
+  artists[20]["nationality"] ="black";
+  artists[20]["bio"]=" owned?";
+  
+  console.log(addArtist(object));
+}
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
@@ -287,9 +298,17 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
+function lotsOfArt(artists){
+    let newArr = [];
+    for(let i = 0; 1 < arr.length; i++){
+        if(arr[i].includes(paintings)){
+            newArr.push(arr[i]);
+            return arr.includes([i],"painted");
+        }
+        return newArr;
+         
+    }
+    console.log(lotsOfArt(artists));
 
 }
 
