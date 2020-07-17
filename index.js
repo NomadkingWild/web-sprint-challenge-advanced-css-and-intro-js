@@ -212,7 +212,7 @@ const artists = [
 /* according to google the string.slice function should work here however I dont recall learning to use .slice or learning how to pull information out of the object when it is nothing but a string.*/
 
 console.log(artists[0]); /* if these were methods as we were taught i could legitimately just console.log(artists[0].name);*/
-console.log(artists[0]); /* this one would be console.log(artists[2].bio);*/
+console.log(artists[2]); /* this one would be console.log(artists[2].bio);*/
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */

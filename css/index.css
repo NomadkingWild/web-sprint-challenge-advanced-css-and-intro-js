@@ -153,4 +153,9 @@ button:hover{
         margin: 10 10;
         padding: 5%;
     }
+    @media (prefers-reduced-motion: reduce) {
+        button {
+          animation: none;
+        }
+    }
 }
