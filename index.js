@@ -282,18 +282,18 @@ function addArtist(arr,id, name, years, genre, nationality, bio){
    arr.push({id, name, years, genre, nationality, bio});
   return arr;
 
-  addArtist(
-    artists,
-    20,
-    "Emanuel Luper",
-    "1991-Current",
-    "Web Design",
-    "USA",
-    "I got it, now just more practice!"
-  )
 }
+addArtist(
+  artists,
+  21,
+  "Emanuel",
+  "1991-2020",
+  "Web Design",
+  "American",
+  "its working now!"
 
-  console.log(addArtist(artists));
+);
+  console.log(artists);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -303,21 +303,36 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(artists){
-    let newArr = [];
-    for(let i = 0; 1 < arr.length; i++){
-        if(arr[i].includes(paintings)){
-            newArr.push(arr[i]);
-            return arr.includes([i],"painted");
-        }
-        return newArr;
-         
+function lotsOfArt(arr){
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++){
+      if(arr[i].paintings > 100){
+          newArr.push(arr[i]);
+      }
     }
-    console.log(lotsOfArt(artists));
-
+    return newArr;
 }
+console.log('TASK 7', lotsOfArt(artists));
+// function lotsOfArt(arr){
+//     let newArr = [];
+//     for(let i = 0; 1 < arr.length; i++){
+//         if(arr[i].paintings > 100){
+//             // 
+//             console.log(arr[i]);
+//             // return arr.includes([i],"painted");
+//         }
+        
+//       }
+//       return newArr;
+    
+//   }
+//   console.log(lotsOfArt(artists));
 
-
+// function canVote(age){
+//   if(age >= 18){
+//     return `is old enough to vote`
+//   }
+// }
 
 // 🎨🎨 STRETCH 🎨🎨//
 
